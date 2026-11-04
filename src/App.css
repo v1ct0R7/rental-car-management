@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f4ef;
+  color: #1b2430;
+}
+
+/* Navbar: logo majtas, linqet djathtas */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 32px;
+  background: #14202e;
+}
+
+.logo {
+  height: 50px;
+}
+
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 24px;
+}
+
+.navbar nav a:hover {
+  color: #e8a317;
+}
+
+/* Foto + emri në mes */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 900px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* 3 skeda për rresht */
+.cars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #d9d5cb;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons button {
+  flex: 1;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #14202e;
+  border: 2px solid #14202e;
+  background: white;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttons button:last-child {
+  background: #14202e;
+  color: white;
+}
+
+/* FAQ */
+.faq {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.faq details {
+  background: white;
+  border: 1px solid #d9d5cb;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+}
+
+.faq summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  background: #14202e;
+  color: white;
+  padding: 30px 20px;
+}
+
+.footer h4 {
+  color: #e8a317;
+}
+
+/* Telefon: 1 skedë për rresht */
+@media (max-width: 700px) {
+  .cars {
+    grid-template-columns: 1fr;
+  }
+}
