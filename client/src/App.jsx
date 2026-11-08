@@ -1,13 +1,14 @@
 import "./App.css";
+import carPlaceholder from "./assets/car-placeholder.svg";
 
 // Lista e makinave. Për të shtuar një makinë, shto një rresht këtu.
 const cars = [
-  { name: "Toyota Yaris", price: 35, image: "/images/yaris.jpg" },
-  { name: "VW Golf", price: 45, image: "/images/golf.jpg" },
-  { name: "BMW 3 Series", price: 85, image: "/images/bmw3.jpg" },
-  { name: "Audi A4", price: 90, image: "/images/audi.jpg" },
-  { name: "Mercedes C-Class", price: 95, image: "/images/mercedes.jpg" },
-  { name: "Range Rover", price: 140, image: "/images/rangerover.jpg" },
+  { name: "Toyota Yaris", price: 35 },
+  { name: "VW Golf", price: 45 },
+  { name: "BMW 3 Series", price: 85 },
+  { name: "Audi A4", price: 90 },
+  { name: "Mercedes C-Class", price: 95 },
+  { name: "Range Rover", price: 140 },
 ];
 
 const faqs = [
@@ -20,7 +21,7 @@ const faqs = [
 function Navbar() {
   return (
     <header className="navbar">
-      <img className="logo" src="/images/logo.png" alt="Rental_Car_Management logo" />
+      <a className="logo" href="#home">Rental Car Management</a>
       <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -35,8 +36,9 @@ function Navbar() {
 function Hero() {
   return (
     <section className="hero" id="home">
-      <img src="/images/logo.png" alt="Rental_Car_Management" />
-      <h1>Rental_Car_Management</h1>
+      <p className="eyebrow">YOUR NEXT JOURNEY STARTS HERE</p>
+      <h1>Find the right car for your next trip</h1>
+      <p>Browse our fleet and choose a car that fits your plans.</p>
     </section>
   );
 }
@@ -44,7 +46,7 @@ function Hero() {
 function CarCard({ car }) {
   return (
     <div className="card">
-      <img src={car.image} alt={car.name} />
+      <img src={carPlaceholder} alt={`${car.name} rental car`} />
       <h3>{car.name}</h3>
       <div className="buttons">
         <button>Price: ${car.price} / day</button>
