@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab3c61a-d8a5-4f17-bcd6-3f648f97e513" name="Changes" comment="" />
+    <list default="true" id="cab3c61a-d8a5-4f17-bcd6-3f648f97e513" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,12 +20,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "jurim007"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jurim007&quot;
   }
-}]]></component>
+}</component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
       <RecentBranches>
@@ -51,29 +53,29 @@
   </component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/v1ct0R7/rental-car-management.git",
+    "url": "git@github.com:v1ct0R7/rental-car-management.git",
     "accountId": "6d6c1ed7-f436-4011-8ee6-f938785125f7"
   }
 }]]></component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000661285289596" />
-      <entry key="S2" value="1.5189669489281763" />
-      <entry key="S5" value="4.496684172534398" />
-      <entry key="S10" value="7.8487715788704735" />
-      <entry key="S30" value="18.573519677899032" />
-      <entry key="S60" value="35.21601906163752" />
-      <entry key="M2" value="55.135117827585056" />
-      <entry key="M5" value="77.97580021269529" />
-      <entry key="M10" value="95.04237306408949" />
-      <entry key="M15" value="104.70785055889144" />
-      <entry key="M30" value="118.29062439633073" />
-      <entry key="H1" value="127.19807372459948" />
-      <entry key="H2" value="132.3347140950525" />
-      <entry key="H4" value="135.09747981254736" />
-      <entry key="D1" value="137.50620106253243" />
-      <entry key="W1" value="137.92920671395527" />
+      <entry key="MS100" value="1.1842836521613875" />
+      <entry key="MS500" value="1.7130128586820703" />
+      <entry key="S2" value="1.9189129913418017" />
+      <entry key="S5" value="1.976644717805684" />
+      <entry key="S10" value="2.637273636391108" />
+      <entry key="S30" value="15.778932741125924" />
+      <entry key="S60" value="37.00649953389271" />
+      <entry key="M2" value="69.02948593984144" />
+      <entry key="M5" value="126.17493623304664" />
+      <entry key="M10" value="171.16527798789065" />
+      <entry key="M15" value="194.6348779752135" />
+      <entry key="M30" value="226.23250466094382" />
+      <entry key="H1" value="246.5290063433233" />
+      <entry key="H2" value="258.1724553122895" />
+      <entry key="H4" value="264.42826063372956" />
+      <entry key="D1" value="269.881863822483" />
+      <entry key="W1" value="270.8396945008078" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -95,29 +97,29 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.045122787360078" />
-      <entry key="MS500" value="0.538186000424301" />
-      <entry key="S2" value="1.3750262337889312" />
-      <entry key="S5" value="4.435348846795488" />
-      <entry key="S10" value="7.817001394606362" />
-      <entry key="S30" value="18.5622039011474" />
-      <entry key="S60" value="35.20987828188742" />
-      <entry key="M2" value="55.131752214154524" />
-      <entry key="M5" value="77.9742123747676" />
-      <entry key="M10" value="95.0413629541196" />
-      <entry key="M15" value="104.70707027618543" />
-      <entry key="M30" value="118.29015042945574" />
-      <entry key="H1" value="127.19780740997007" />
-      <entry key="H2" value="132.33457223666352" />
-      <entry key="H4" value="135.09740651212317" />
-      <entry key="D1" value="137.50618849852555" />
-      <entry key="W1" value="137.92920491034954" />
+      <entry key="MS100" value="1.1611668622519657" />
+      <entry key="MS500" value="1.7068884583880954" />
+      <entry key="S2" value="1.9172370896215096" />
+      <entry key="S5" value="1.9759577490590998" />
+      <entry key="S10" value="2.6368234923206177" />
+      <entry key="S30" value="15.777428493984111" />
+      <entry key="S60" value="37.00408617203787" />
+      <entry key="M2" value="69.02691781323425" />
+      <entry key="M5" value="126.17294660176336" />
+      <entry key="M10" value="171.1638505064275" />
+      <entry key="M15" value="194.63374796800963" />
+      <entry key="M30" value="226.23180348385216" />
+      <entry key="H1" value="246.52860760207247" />
+      <entry key="H2" value="258.1722414405757" />
+      <entry key="H4" value="264.4281497068145" />
+      <entry key="D1" value="269.88184474617196" />
+      <entry key="W1" value="270.83969176074004" />
     </decayedShown>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3LpAeYKVrgR68CjxEnSFG1k088T" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
