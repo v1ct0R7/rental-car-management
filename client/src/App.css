@@ -2,71 +2,61 @@
   box-sizing: border-box;
 }
 
+/* Sfondi: logoja e madhe, e zbehur */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f6f4ef;
   color: #1b2430;
+  background:
+    linear-gradient(rgba(246, 244, 239, 0.9), rgba(246, 244, 239, 0.9)),
+    url("/images/logo.png") center / cover no-repeat fixed;
+  background-color: #f6f4ef;
 }
 
+/* Navbar: logo majtas, linqet djathtas */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 24px;
-  padding: 12px max(24px, calc((100% - 1200px) / 2));
+  padding: 12px 32px;
   background: #14202e;
 }
 
 .logo {
-  color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-  white-space: nowrap;
+  height: 50px;
 }
 
 .navbar nav a {
   color: white;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 24px;
+  cursor: pointer;
 }
 
 .navbar nav a:hover {
   color: #e8a317;
 }
 
+/* Titulli në mes */
 .hero {
   text-align: center;
-  padding: 64px 20px 48px;
+  padding: 50px 20px 30px;
 }
 
 .hero h1 {
-  max-width: 720px;
-  margin: 8px auto 12px;
+  font-size: 52px;
+  margin: 0;
   color: #14202e;
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  line-height: 1.1;
 }
 
-.hero p {
-  color: #596575;
-}
-
-.hero .eyebrow {
-  color: #9a6a0a;
-  font-size: 13px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-}
-
+/* Skedat: 3 për rresht, përdorin gjithë gjerësinë */
 .cars {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  max-width: 1200px;
+  gap: 28px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 40px;
 }
 
 .card {
@@ -81,7 +71,10 @@ body {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 6px;
-  background: #e7edf2;
+}
+
+.card h3 {
+  text-align: center;
 }
 
 .buttons {
@@ -107,25 +100,24 @@ body {
   color: white;
 }
 
-.faq {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
+/* Butoni Show all */
+.show-all {
+  text-align: center;
+  margin: 40px 0;
 }
 
-.faq details {
-  background: white;
-  border: 1px solid #d9d5cb;
-  border-radius: 8px;
-  padding: 12px 16px;
-  margin-bottom: 10px;
-}
-
-.faq summary {
+.show-all button {
+  padding: 12px 40px;
+  font-size: 16px;
   font-weight: bold;
+  color: #14202e;
+  background: #e8a317;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
 }
 
+/* Footer */
 .footer {
   display: flex;
   justify-content: center;
@@ -139,30 +131,10 @@ body {
   color: #e8a317;
 }
 
+/* Telefon: 1 skedë për rresht */
 @media (max-width: 700px) {
-  .navbar {
-    flex-direction: column;
-    gap: 12px;
-    padding: 16px;
-  }
-
-  .navbar nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px 18px;
-  }
-
-  .navbar nav a {
-    margin: 0;
-  }
-
   .cars {
     grid-template-columns: 1fr;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    gap: 24px 48px;
+    padding: 0 20px;
   }
 }

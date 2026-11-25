@@ -1,33 +1,28 @@
+import { useState } from "react";
 import "./App.css";
-import carPlaceholder from "./assets/car-placeholder.svg";
 
 // Lista e makinave. Për të shtuar një makinë, shto një rresht këtu.
 const cars = [
-  { name: "Toyota Yaris", price: 35 },
-  { name: "VW Golf", price: 45 },
-  { name: "BMW 3 Series", price: 85 },
-  { name: "Audi A4", price: 90 },
-  { name: "Mercedes C-Class", price: 95 },
-  { name: "Range Rover", price: 140 },
+  { name: "Toyota Yaris", price: 35, category: "Economy", image: "/images/yaris.jpg" },
+  { name: "VW Golf", price: 45, category: "Economy", image: "/images/golf.jpg" },
+  { name: "BMW 3 Series", price: 85, category: "Luxury", image: "/images/bmw3.jpg" },
+  { name: "Audi A4", price: 90, category: "Luxury", image: "/images/audi.jpg" },
+  { name: "Mercedes C-Class", price: 95, category: "Luxury", image: "/images/mercedes.jpg" },
+  { name: "Range Rover", price: 140, category: "SUV", image: "/images/rangerover.jpg" },
 ];
 
-const faqs = [
-  { q: "What documents do I need to rent a car?", a: "An ID or passport and a valid driving license." },
-  { q: "What is the minimum age?", a: "You must be at least 21 years old." },
-  { q: "Do I need to pay a deposit?", a: "Yes, a refundable deposit is taken when you pick up the car." },
-  { q: "Can I cancel my booking?", a: "Yes, cancellation is free up to 24 hours before pickup." },
-];
-
-function Navbar() {
+function Navbar({ setCategory }) {
   return (
     <header className="navbar">
-      <a className="logo" href="#home">Rental Car Management</a>
+      <img className="logo" src="/images/logo.png" alt="Rental Car Management logo" />
       <nav>
-        <a href="#home">Home</a>
+        <a href="#home" onClick={() => setCategory("All")}>Home</a>
         <a href="#about">About</a>
-        <a href="#faq">FAQ</a>
+        <a href="#cars" onClick={() => setCategory("Economy")}>Economy</a>
+        <a href="#cars" onClick={() => setCategory("SUV")}>SUV</a>
+        <a href="#cars" onClick={() => setCategory("Luxury")}>Luxury</a>
         <a href="#contact">Contact</a>
-        <a href="#login">Sign up/Login</a>
+        <a href="#login">Sign up / Login</a>
       </nav>
     </header>
   );
@@ -36,9 +31,7 @@ function Navbar() {
 function Hero() {
   return (
     <section className="hero" id="home">
-      <p className="eyebrow">YOUR NEXT JOURNEY STARTS HERE</p>
-      <h1>Find the right car for your next trip</h1>
-      <p>Browse our fleet and choose a car that fits your plans.</p>
+      <h1>Rental Car Management</h1>
     </section>
   );
 }
@@ -46,7 +39,7 @@ function Hero() {
 function CarCard({ car }) {
   return (
     <div className="card">
-      <img src={carPlaceholder} alt={`${car.name} rental car`} />
+      <img src={car.image} alt={car.name} />
       <h3>{car.name}</h3>
       <div className="buttons">
         <button>Price: ${car.price} / day</button>
@@ -56,47 +49,44 @@ function CarCard({ car }) {
   );
 }
 
-function Faq() {
-  return (
-    <section className="faq" id="faq">
-      <h2>FAQ</h2>
-      {faqs.map((item) => (
-        <details key={item.q}>
-          <summary>{item.q}</summary>
-          <p>{item.a}</p>
-        </details>
-      ))}
-    </section>
-  );
-}
-
 function Footer() {
   return (
     <footer className="footer" id="contact">
       <div>
         <h4>Contact us</h4>
-        <p>info@rental_car_management.com</p>
+        <p>info@rentalcarmanagement.com</p>
         <p>+355 69 000 0000</p>
       </div>
       <div>
         <h4>Address</h4>
-        <p>Rruga Sulejman Delvina, Tiranë</p>
+        <p>Rruga: Sulejman Delvina, Tiranë </p>
       </div>
     </footer>
   );
 }
 
 export default function App() {
+  // "All" do të thotë: shfaq të gjitha makinat
+  const [category, setCategory] = useState("All");
+
+  const shownCars =
+    category === "All" ? cars : cars.filter((car) => car.category === category);
+
   return (
     <div>
-      <Navbar />
+      <Navbar setCategory={setCategory} />
       <Hero />
-      <section className="cars">
-        {cars.map((car) => (
+
+      <section className="cars" id="cars">
+        {shownCars.map((car) => (
           <CarCard key={car.name} car={car} />
         ))}
       </section>
-      <Faq />
+
+      <div className="show-all">
+        <button onClick={() => setCategory("All")}>Show all</button>
+      </div>
+
       <Footer />
     </div>
   );
